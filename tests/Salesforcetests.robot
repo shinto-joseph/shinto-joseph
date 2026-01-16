@@ -1,6 +1,7 @@
 ###############################################################################
 # NOTE: readme.txt contains important information you need to take into account
 # before running this suite.
+###############################################################################
 
 *** Settings ***
 Resource                      ../resources/common.robot
