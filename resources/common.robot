@@ -5,12 +5,14 @@ Library                   QForce
 Library                   String
 
 
+
 *** Variables ***
 # IMPORTANT: Please read the readme.txt to understand needed variables and how to handle them!!
 ${BROWSER}                chrome
 ${username}               pace.delivery1@qentinel.com.demonew
 ${login_url}              https://qentinel--demonew.my.salesforce.com/            # Salesforce instance. NOTE: Should be overwritten in CRT variables
 ${home_url}               ${login_url}/lightning/page/home
+
 
 
 *** Keywords ***
@@ -25,8 +27,10 @@ Setup Browser
     # adds a delay of 0.3 between keywords. This is helpful in cloud with limited resources.
     SetConfig             Delay                       0.3
 
+
 End suite
     Close All Browsers
+
 
 
 Login
@@ -119,4 +123,6 @@ DeleteLeads
     VerifyText            Undo
     VerifyNoText          Undo
     ClickText             Leads                    partial_match=False
+
+
 
